@@ -82,7 +82,7 @@ new PropertyMetadata(0, (s, e) =>
 
 	public void SetTime(int time)
 	{
-		var js = $"uwpSetTime(element,{time});";
+		var js = $"umpSetVideoTime(element,{time});";
 		this.ExecuteJavascript(js);
 	}
 }

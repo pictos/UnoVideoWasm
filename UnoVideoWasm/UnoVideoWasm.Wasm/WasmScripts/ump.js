@@ -14,6 +14,8 @@ function umpSetVideoTime(element, time) {
     const videoJsScript = arr.find(s => s.src.endsWith('video.js'));
     require([videoJsScript.currentTime], function (videojs) {
         let player = videojs(element)
-		player.currentTime(time);
+        player.ready(function () {
+            player.currentTime(time);
+        });
     });
 }
